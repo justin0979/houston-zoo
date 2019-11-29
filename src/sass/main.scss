@@ -1,27 +1,13 @@
-*,
-*::after,
-*::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1.6rem;
-}
+@import 'base/base';
+@import 'base/typography';
 
 .app {
   height: 80vh;
-  color: #cccbbb;
   margin: 10rem;
+  padding: 1rem;
   background-image: linear-gradient(to left, #222, #888);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  justify-content: center;
+  justify-items: center;
 }
