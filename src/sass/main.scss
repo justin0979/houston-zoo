@@ -4,23 +4,29 @@
 .app {
   min-height: 80vh;
   min-width: min-content;
-  margin: 10rem;
+  margin: 1rem;
   padding: 1rem;
   background-image: linear-gradient(to left, #222, #888);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   grid-gap: 1rem;
+
   align-items: center;
   justify-items: center;
 }
 
 img {
-  height: 20rem;
+  width: 25rem;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.9);
+
+  &:active {
+    width: 40rem;
+  }
 }
 
 figure {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

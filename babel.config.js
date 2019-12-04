@@ -1,28 +1,29 @@
 module.exports = {
   presets: [
     [
-      "@babel/env",
+      '@babel/env',
       {
-        useBuiltIns: "usage",
+        useBuiltIns: 'usage',
         corejs: {
           version: 3,
           proposals: true
         }
       }
     ],
-    "@babel/react"
+    '@babel/react'
   ],
   plugins: [
-    "@babel/transform-runtime",
-    "@babel/proposal-class-properties",
+    '@babel/transform-runtime',
+    '@babel/proposal-class-properties',
+    '@babel/syntax-dynamic-import',
     [
-      "module-resolver",
+      'module-resolver',
       {
         alias: {
-          "@src": "./src",
-          "@components": "./src/components",
-          "@images": "./src/images",
-          "@sass": "./src/sass"
+          '@src': './src',
+          '@components': './src/components',
+          '@images': './src/images',
+          '@sass': './src/sass'
         }
       }
     ]
