@@ -1,3 +1,16 @@
 body {
   color: #cccbbb;
 }
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 55vw;
+  top: 75vh;
+  font-size: 5rem;
+  background-image: linear-gradient(to right bottom, #222, #ccc);
+  background-clip: text;
+  color: transparent;
+}

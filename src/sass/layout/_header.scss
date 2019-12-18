@@ -1,0 +1,40 @@
+// #ffffae -> yellowish
+.header {
+  background-image: url('~elephantEars');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+
+  @media only screen and (max-width: 768px) {
+    background-size: contain;
+    height: 66vh;
+  }
+
+  @media only screen and (max-width: 600px) {
+    height: 50vh;
+    background-size: contain;
+  }
+
+  @media only screen and (max-width: 452px) {
+    background-size: contain;
+    height: 46vh;
+  }
+}
+/*
+@media only screen and (max-width: 600px) {
+  .header {
+    height: 64vh;
+  }
+}
+*/
+
+.sect {
+  background-image: url('~edited_flamingo_header');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  height: 100vh;
+}

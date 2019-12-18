@@ -21,7 +21,7 @@ module.exports = {
     overlay: true
   },
   resolve: {
-    modules: ['src', 'node_modules'],
+    modules: ['src', 'src/images', 'node_modules'],
     extensions: [
       '.js',
       '.jsx',

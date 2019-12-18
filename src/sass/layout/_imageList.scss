@@ -1,0 +1,12 @@
+.imageList {
+  min-height: min-content;
+  padding: 3rem;
+  background-image: linear-gradient(to left, #222, #888);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-gap: 0 1rem;
+  grid-auto-rows: 1rem;
+
+  align-items: center;
+  justify-items: center;
+}
