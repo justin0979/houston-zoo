@@ -8,7 +8,7 @@ const PictureCard = props => {
   const calcSpans = () => {
     const height = imageRef.current.clientHeight;
 
-    const spans = Math.ceil(height / 10 + 10);
+    const spans = Math.ceil(height / 10 + 13);
 
     setSpans(spans);
   };
