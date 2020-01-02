@@ -1,0 +1,32 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(black, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
+
+  &__content {
+    height: 50%;
+    width: 75%;
+    transform: scale(0);
+    background-color: white;
+    transition: all 0.3s 1s;
+    display: flex;
+  }
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content {
+    transform: scale(1);
+  }
+}

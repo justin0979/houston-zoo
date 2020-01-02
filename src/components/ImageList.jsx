@@ -5,7 +5,7 @@ const ImageList = ({ pics }) => {
   return (
     <div className="imageList">
       {pics.map(img => (
-        <PictureCard key={img.key} src={img.src} text={img.text} />
+        <PictureCard key={img.id} src={img.src} text={img.text} id={img.id} />
       ))}
     </div>
   );

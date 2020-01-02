@@ -1,0 +1,7 @@
+.anchor {
+  &__btn:link,
+  &__btn:visited {
+    text-decoration: none;
+    color: $color-text;
+  }
+}
