@@ -21,8 +21,13 @@ const PictureCard = props => {
   return (
     <div className="card" style={{ gridRowEnd: `span ${spans}` }}>
       <figure className="card__side card__side--front" id={props.id}>
-        <img ref={imageRef} src={props.src} alt={props.text} />
-        <a href="#popup" alt="Popup Info" className="anchor anchor__btn">
+        <img ref={imageRef} src={props.src} alt={props.text} className="pic" />
+        <a
+          href="#popup"
+          alt="Popup Info"
+          className="anchor anchor__btn"
+          onClick={() => props.getPicture(props.src)}
+        >
           <h2>{props.text}</h2>
         </a>
       </figure>

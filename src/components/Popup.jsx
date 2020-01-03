@@ -5,11 +5,8 @@ export default props => {
   return (
     <div className="popup" id="popup">
       <div className="popup__content">
-        <a
-          href="javascript:history.back()"
-          alt="Images"
-          className="popup__close"
-        >
+        <img src={props.picture} alt="zoo pics" />
+        <a href="#" alt="Images" className="popup__close">
           Close
         </a>
       </div>

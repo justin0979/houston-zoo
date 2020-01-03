@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '@components/Header';
 import ImageList from '@components/ImageList';
 import SectFlamingo from '@components/SectFlamingo';
@@ -32,24 +32,30 @@ const pics = [
 ];
 
 const picsStatues = [
-  { id: 'picsStatues7', src: sealStatue, text: 'Seal' },
-  { id: 'picsStatues1', src: cheetahStatue, text: 'Cheetah Statue' },
-  { id: 'picsStatues2', src: cobraStatue, text: 'Cobra Statue' },
-  { id: 'picsStatues8', src: moleStatue, text: 'Mole' },
-  { id: 'picsStatues3', src: giraffeStatue, text: 'Not quite as tall' },
-  { id: 'picsStatues4', src: frogStatue, text: 'Frog Statue' },
-  { id: 'picsStatues5', src: birdBank, text: 'A large bird bank' },
-  { id: 'picsStatues6', src: gorilla2, text: 'Gorilla Statue' }
+  { id: 'picsStatues1', src: sealStatue, text: 'Seal' },
+  { id: 'picsStatues2', src: cheetahStatue, text: 'Cheetah Statue' },
+  { id: 'picsStatues3', src: gorilla2, text: 'Gorilla Statue' },
+  { id: 'picsStatues4', src: cobraStatue, text: 'Cobra Statue' },
+  { id: 'picsStatues5', src: moleStatue, text: 'Mole' },
+  { id: 'picsStatues6', src: giraffeStatue, text: 'Not quite as tall' },
+  { id: 'picsStatues7', src: frogStatue, text: 'Frog Statue' },
+  { id: 'picsStatues8', src: birdBank, text: 'A large bird bank' }
 ];
 
+const getPicture = pic => {
+  return pic;
+};
+
 const App = () => {
+  const [picture, setPicture] = useState(apePicChimp);
+
   return (
     <div>
       <Header />
-      <ImageList pics={picsStatues} />
+      <ImageList pics={picsStatues} getPicture={() => setPicture(getPicture)} />
       <SectFlamingo />
       <ImageList pics={pics} />
-      <Popup />
+      <Popup picture={picture} />
     </div>
   );
 };

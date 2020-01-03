@@ -11,9 +11,9 @@
   transition: all 0.3s;
   opacity: 0;
   visibility: hidden;
+  z-index: 20;
 
   &__content {
-    height: 50%;
     width: 75%;
     transform: scale(0);
     background-color: white;
