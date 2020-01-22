@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 
 const PictureCard = props => {
@@ -19,9 +20,16 @@ const PictureCard = props => {
 
   return (
     <div className="card" style={{ gridRowEnd: `span ${spans}` }}>
-      <figure className="card__side card__side--front">
-        <img ref={imageRef} src={props.src} alt={props.text} />
-        <h2>{props.text}</h2>
+      <figure className="card__side card__side--front" id={props.id}>
+        <img ref={imageRef} src={props.src} alt={props.text} className="pic" />
+        <a
+          href="#popup"
+          alt="Popup Info"
+          className="anchor anchor__btn"
+          onClick={() => props.getPicture(props.src)}
+        >
+          <h2>{props.text}</h2>
+        </a>
       </figure>
     </div>
   );

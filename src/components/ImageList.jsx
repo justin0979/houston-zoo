@@ -1,13 +1,20 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PictureCard from '@components/PictureCard';
 
-const ImageList = ({ pics }) => {
+const ImageList = ({ pics, getPicture }) => {
   return (
-    <div className="imageList">
+    <section className="imageList">
       {pics.map(img => (
-        <PictureCard key={img.key} src={img.src} text={img.text} />
+        <PictureCard
+          key={img.id}
+          src={img.src}
+          text={img.text}
+          id={img.id}
+          getPicture={getPicture}
+        />
       ))}
-    </div>
+    </section>
   );
 };
 
