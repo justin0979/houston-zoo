@@ -3,6 +3,7 @@ import Header from '@components/Header';
 import ImageList from '@components/ImageList';
 import SectFlamingo from '@components/SectFlamingo';
 import Popup from '@components/Popup';
+import Footer from '@components/Footer';
 
 import apePicChimp from '@images/edited_apePicChimp';
 import asianElephant from '@images/edited_asianElephant';
@@ -56,6 +57,7 @@ const App = () => {
       <SectFlamingo />
       <ImageList pics={pics} />
       <Popup picture={picture} />
+      <Footer />
     </div>
   );
 };

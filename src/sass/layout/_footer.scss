@@ -1,0 +1,15 @@
+.footer {
+  height: 15vh;
+  background-color: #222;
+
+  .position-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ddd;
+    text-decoration: none;
+    font-size: 2rem;
+    height: 10rem;
+    width: 20rem;
+  }
+}
