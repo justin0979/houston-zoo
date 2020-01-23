@@ -2,7 +2,7 @@
 import React from 'react';
 import PictureCard from '@components/PictureCard';
 
-const ImageList = ({ pics, getPicture }) => {
+const ImageList = ({ pics }) => {
   return (
     <section className="imageList">
       {pics.map(img => (
@@ -11,7 +11,7 @@ const ImageList = ({ pics, getPicture }) => {
           src={img.src}
           text={img.text}
           id={img.id}
-          getPicture={getPicture}
+          originalPic={img.originalPic}
         />
       ))}
     </section>

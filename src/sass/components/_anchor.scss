@@ -1,7 +1,18 @@
 .anchor {
+  transition: all 0.3s ease-in;
+  height: 3rem;
+
   &__btn:link,
   &__btn:visited {
     text-decoration: none;
     color: $color-text;
+  }
+
+  &:hover {
+    text-align: center;
+    width: 25rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    background-color: #999;
   }
 }

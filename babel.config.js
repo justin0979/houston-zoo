@@ -21,8 +21,10 @@ module.exports = {
       {
         alias: {
           '@src': './src',
+          '@actions': './src/actions',
           '@components': './src/components',
           '@images': './src/images',
+          '@reducers': './src/reducers',
           '@sass': './src/sass'
         }
       }

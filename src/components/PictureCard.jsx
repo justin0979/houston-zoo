@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { fetchPic, fetchOriginalPic, fetchId } from '@actions';
 
 const PictureCard = props => {
   const [spans, setSpans] = useState(0);
@@ -26,7 +28,12 @@ const PictureCard = props => {
           href="#popup"
           alt="Popup Info"
           className="anchor anchor__btn"
-          onClick={() => props.getPicture(props.src)}
+          // use connect instead of below
+          onClick={() => {
+            props.fetchPic(props.src);
+            props.fetchOriginalPic(props.originalPic);
+            props.fetchId(props.id);
+          }}
         >
           <h2>{props.text}</h2>
         </a>
@@ -35,4 +42,6 @@ const PictureCard = props => {
   );
 };
 
-export default PictureCard;
+export default connect(null, { fetchOriginalPic, fetchPic, fetchId })(
+  PictureCard
+);
