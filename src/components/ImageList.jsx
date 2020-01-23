@@ -6,7 +6,13 @@ const ImageList = ({ pics }) => {
   return (
     <section className="imageList">
       {pics.map(img => (
-        <PictureCard key={img.id} src={img.src} text={img.text} id={img.id} />
+        <PictureCard
+          key={img.id}
+          src={img.src}
+          text={img.text}
+          id={img.id}
+          originalPic={img.originalPic}
+        />
       ))}
     </section>
   );

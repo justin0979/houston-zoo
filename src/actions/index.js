@@ -1,4 +1,4 @@
-import { PICTURE, ID } from '@actions/types';
+import { ORIGINAL_PICTURE, PICTURE, ID } from '@actions/types';
 
 export const fetchPic = pic => {
   return {
@@ -11,5 +11,12 @@ export const fetchId = id => {
   return {
     type: ID,
     payload: id
+  };
+};
+
+export const fetchOriginalPic = pic => {
+  return {
+    type: ORIGINAL_PICTURE,
+    payload: pic
   };
 };

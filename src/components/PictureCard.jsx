@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchPic, fetchId } from '@actions';
+import { fetchPic, fetchOriginalPic, fetchId } from '@actions';
 
 const PictureCard = props => {
   const [spans, setSpans] = useState(0);
@@ -31,6 +31,7 @@ const PictureCard = props => {
           // use connect instead of below
           onClick={() => {
             props.fetchPic(props.src);
+            props.fetchOriginalPic(props.originalPic);
             props.fetchId(props.id);
           }}
         >
@@ -41,4 +42,6 @@ const PictureCard = props => {
   );
 };
 
-export default connect(null, { fetchPic, fetchId })(PictureCard);
+export default connect(null, { fetchOriginalPic, fetchPic, fetchId })(
+  PictureCard
+);

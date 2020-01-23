@@ -1,4 +1,5 @@
 import apePicChimp from '@images/edited_apePicChimp';
+import originalApePicChimp from '@images/originalApePicChimp';
 import asianElephant from '@images/edited_asianElephant';
 import lions from '@images/edited_lions';
 import meerkats from '@images/edited_meerKat';
@@ -9,7 +10,7 @@ import okapi from '@images/edited_okapi';
 export default () => [
   {
     id: 'pics1',
-    originalPic: asianElephant,
+    originalPic: originalApePicChimp,
     src: apePicChimp,
     text: 'Twin Calebs?'
   },

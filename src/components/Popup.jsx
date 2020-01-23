@@ -11,7 +11,7 @@ const Popup = props => {
         <a href={`#${props.fetchedId}`} alt="Images" className="popup__close">
           Close
         </a>
-        <img src={props.fetchedPic} alt="zoo pics" />
+        <img src={props.fetchedOriginalPic} alt="zoo pics" />
       </div>
     </div>
   );
@@ -19,7 +19,8 @@ const Popup = props => {
 
 const mapStateToProps = state => ({
   fetchedPic: state.fetchedPic,
-  fetchedId: state.fetchedId
+  fetchedId: state.fetchedId,
+  fetchedOriginalPic: state.fetchedOriginalPic
 });
 
 export default connect(mapStateToProps)(Popup);

@@ -1,4 +1,5 @@
 import birdBank from '@images/birdBank';
+import originalBirdBank from '@images/edited_birdBank';
 import gorilla2 from '@images/gorillaStatue';
 import frogStatue from '@images/edited_frogStatue';
 import giraffeStatue from '@images/edited_GiraffeStatue';
@@ -6,6 +7,7 @@ import cheetahStatue from '@images/edited_cheetahStatue';
 import cobraStatue from '@images/edited_cobraStatue';
 import sealStatue from '@images/edited_seal-statue';
 import moleStatue from '@images/edited_mole';
+import mole from '@images/mole';
 
 export default () => [
   {
@@ -34,7 +36,7 @@ export default () => [
   },
   {
     id: 'picsStatues5',
-    originalPic: cheetahStatue,
+    originalPic: mole,
     src: moleStatue,
     text: 'Mole'
   },
@@ -52,7 +54,7 @@ export default () => [
   },
   {
     id: 'picsStatues8',
-    originalPic: cheetahStatue,
+    originalPic: originalBirdBank,
     src: birdBank,
     text: 'A large bird bank'
   }
