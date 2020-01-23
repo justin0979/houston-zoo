@@ -5,15 +5,11 @@ import { fetchPic, fetchOriginalPic, fetchId } from '@actions';
 
 const PictureCard = props => {
   const [spans, setSpans] = useState(0);
-  const [minHeight, setMinHeight] = useState(0);
 
   const imageRef = React.createRef();
 
   const calcSpans = () => {
     const height = imageRef.current.clientHeight;
-    if (height > minHeight) {
-      setMinHeight(height);
-    }
 
     const spans = Math.ceil(height / 10 + 13);
 
@@ -25,10 +21,7 @@ const PictureCard = props => {
   }, []);
 
   return (
-    <div
-      className="card"
-      style={{ minHeight: `${minHeight}`, gridRowEnd: `span ${spans}` }}
-    >
+    <div className="card" style={{ gridRowEnd: `span ${spans}` }}>
       <figure className="card__side card__side--front" id={props.id}>
         <img ref={imageRef} src={props.src} alt={props.text} className="pic" />
         <a
