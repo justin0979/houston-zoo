@@ -2,9 +2,9 @@
 import React from 'react';
 import PictureCard from '@components/PictureCard';
 
-const ImageList = ({ pics }) => {
+const ImageList = ({ pics, id }) => {
   return (
-    <section className="imageList">
+    <section className="imageList" id={id}>
       {pics.map(img => (
         <PictureCard
           key={img.id}

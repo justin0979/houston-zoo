@@ -6,25 +6,21 @@ import ImageList from '@components/ImageList';
 import SectFlamingo from '@components/SectFlamingo';
 import Popup from '@components/Popup';
 import Footer from '@components/Footer';
+import Menu from '@components/Menu';
 
-class App extends React.Component {
-  getPicture = pic => {
-    return pic;
-  };
-
-  render() {
-    return (
-      <div>
-        <Header />
-        <ImageList pics={this.props.statuePics} />
-        <SectFlamingo />
-        <ImageList pics={this.props.liveAnimalPics} />
-        <Popup picture={this.props.fetchedPic} />
-        <Footer />
-      </div>
-    );
-  }
-}
+const App = props => {
+  return (
+    <div>
+      <Menu />
+      <Header />
+      <ImageList pics={props.statuePics} id="statuePicsId" />
+      <SectFlamingo />
+      <ImageList pics={props.liveAnimalPics} id="liveAnimalPicsId" />
+      <Popup picture={props.fetchedPic} />
+      <Footer />
+    </div>
+  );
+};
 
 const mapStateToProps = state => ({
   statuePics: state.statuePics,

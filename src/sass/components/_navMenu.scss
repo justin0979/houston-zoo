@@ -1,0 +1,23 @@
+.nav-menu {
+  display: flex;
+  width: 100vw;
+  background-color: #222;
+  font-size: 2rem;
+  position: fixed;
+
+  &__item {
+    display: flex;
+    height: 5rem;
+    align-items: center;
+    justify-content: center;
+    color: #ddd;
+    width: 30rem;
+    text-transform: uppercase;
+    margin: 0 1rem;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #555;
+    }
+  }
+}
