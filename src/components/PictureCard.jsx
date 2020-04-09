@@ -1,29 +1,35 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useEffect } from 'react';
-import { connect } from 'react-redux';
-import { fetchPic, fetchOriginalPic, fetchId } from '@actions';
+import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
+import { fetchPic, fetchOriginalPic, fetchId } from "@actions";
 
-const PictureCard = props => {
+const PictureCard = (props) => {
   const [spans, setSpans] = useState(0);
 
   const imageRef = React.createRef();
+  console.log(imageRef);
 
   const calcSpans = () => {
     const height = imageRef.current.clientHeight;
 
     const spans = Math.ceil(height / 10 + 13);
-
     setSpans(spans);
   };
 
   useEffect(() => {
-    imageRef.current.addEventListener('load', calcSpans);
-  }, []);
+    console.log("Spans:", spans);
+    imageRef.current.addEventListener("load", calcSpans);
+  }, [spans]);
 
   return (
     <div className="card" style={{ gridRowEnd: `span ${spans}` }}>
       <figure className="card__side card__side--front" id={props.id}>
-        <img ref={imageRef} src={props.src} alt={props.text} className="pic" />
+        <img
+          ref={imageRef}
+          src={props.src}
+          alt={props.text}
+          className="pic"
+        />
         <a
           href="#popup"
           alt="Popup Info"
