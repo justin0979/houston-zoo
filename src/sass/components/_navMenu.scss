@@ -3,7 +3,8 @@
   width: 100vw;
   background-color: #222;
   font-size: 2rem;
-  position: fixed;
+  position: sticky;
+  top: 0;
 
   &__item {
     display: flex;
