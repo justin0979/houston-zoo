@@ -5,6 +5,7 @@ import { fetchPic, fetchOriginalPic, fetchId } from "@actions";
 
 const PictureCard = (props) => {
   const [spans, setSpans] = useState(0);
+  const [rem, setRem] = useState(0);
 
   const imageRef = React.createRef();
   console.log(imageRef);
@@ -14,6 +15,7 @@ const PictureCard = (props) => {
 
     const spans = Math.ceil(height / 10 + 13);
     setSpans(spans);
+    setRem(spans / 10);
   };
 
   useEffect(() => {
@@ -22,7 +24,10 @@ const PictureCard = (props) => {
   }, [spans]);
 
   return (
-    <div className="card" style={{ gridRowEnd: `span ${spans}` }}>
+    <div
+      className="card"
+      style={{ gridRowEnd: `span ${spans}`, gridAutoRows: `${rem}rem` }}
+    >
       <figure className="card__side card__side--front" id={props.id}>
         <img
           ref={imageRef}

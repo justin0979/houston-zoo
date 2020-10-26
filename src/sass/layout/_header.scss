@@ -19,7 +19,7 @@
 
   @media only screen and (max-width: 452px) {
     background-size: contain;
-    height: 34vh;
+    height: 31vh;
   }
 }
 /*
@@ -40,7 +40,7 @@
 
   @media only screen and (max-width: 452px) {
     background-size: contain;
-
+    background-attachment: scroll;
     height: 30vh; // was 46vh, 30vh reduces dist b/t list and bckgrnd
   }
 }
