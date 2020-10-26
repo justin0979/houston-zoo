@@ -1,0 +1,14 @@
+.sect {
+  background-image: url("~edited_flamingo_header");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  height: 100vh;
+
+  @media only screen and (max-width: 452px) {
+    background-size: contain;
+
+    height: 30vh; // was 46vh, 30vh reduces dist b/t list and bckgrnd
+  }
+}
