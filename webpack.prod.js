@@ -1,81 +1,74 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: ['./src'],
+  entry: ["./src"],
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: ''
+    filename: "bundle.[contenthash].js",
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "",
   },
-  mode: 'production',
+  mode: "production",
   optimization: {
     splitChunks: {
-      chunks: 'all'
-    }
-  },
-  devServer: {
-    contentBase: 'dist',
-    port: 3000,
-    hot: true,
-    overlay: true
+      chunks: "all",
+    },
   },
   resolve: {
-    modules: ['src', 'src/images', 'node_modules'],
+    modules: ["src", "src/images", "node_modules"],
     extensions: [
-      '.js',
-      '.jsx',
-      '.css',
-      '.scss',
-      '.jpg',
-      '.jpeg',
-      '.png',
-      '.svg',
-      '.gif'
-    ]
+      ".js",
+      ".jsx",
+      ".css",
+      ".scss",
+      ".jpg",
+      ".jpeg",
+      ".png",
+      ".svg",
+      ".gif",
+    ],
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
+        use: "babel-loader",
       },
       {
         test: /\.s?css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-          'sass-loader'
-        ]
+          "css-loader",
+          "postcss-loader",
+          "sass-loader",
+        ],
       },
       {
         test: /\.html$/,
-        use: 'html-loader'
+        use: "html-loader",
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[path][name].[ext]'
-            }
+              name: "[path][name].[ext]",
+            },
           },
-          'image-webpack-loader'
-        ]
-      }
-    ]
+          "image-webpack-loader",
+        ],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: "./src/index.html",
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[hash].css',
-      chunkFilename: '[id].[hash].css'
-    })
-  ]
+      filename: "[name].[contenthash].css",
+    }),
+  ],
 };

@@ -15,8 +15,6 @@
   z-index: 20;
 
   &__content {
-    height: 90vh;
-    width: 75%;
     transform: scale(0);
     background-color: white;
     transition: all 0.3s 0.4s;
@@ -46,12 +44,7 @@
 @media only screen and (max-width: 768px) {
   .popup {
     &__content {
-      height: 90vh;
-      width: 60vw;
-      flex-direction: column;
-      & > img {
-        height: 50rem;
-      }
+      height: 80vh;
     }
   }
 }
@@ -61,6 +54,7 @@
     &__content {
       height: 86vh;
       width: 70vw;
+      flex-direction: column;
       & > img {
         height: 50rem;
       }
@@ -71,7 +65,8 @@
 @media only screen and (max-width: 452px) {
   .popup {
     &__content {
-      height: 50%;
+      height: auto;
+      width: auto;
     }
   }
 }
