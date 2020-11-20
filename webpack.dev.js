@@ -9,16 +9,12 @@ module.exports = {
     publicPath: "",
   },
   mode: "development",
-  optimization: {
-    splitChunks: {
-      chunks: "all",
-    },
-  },
   devServer: {
-    contentBase: "dist",
+    contentBase: path.resolve(__dirname, "dist"),
     port: 3000,
     hot: true,
     overlay: true,
+    writeToDisk: true,
   },
   resolve: {
     modules: ["src", "src/images", "node_modules"],
