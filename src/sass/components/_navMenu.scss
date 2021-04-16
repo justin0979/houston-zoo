@@ -5,12 +5,13 @@
   font-size: 2rem;
   position: sticky;
   top: 0;
+  justify-content: space-evenly;
 
   &__item {
     display: flex;
     height: 5rem;
     align-items: center;
-    justify-content: center;
+    text-align: center;
     color: #ddd;
     width: 30rem;
     text-transform: uppercase;
